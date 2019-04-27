@@ -106,7 +106,7 @@ def comment_image(browser, username, comments, blacklist, logger, logfolder):
     sleep(60)
 
     times = dt.utcnow().strftime("%s");    
-    browser.save_screenshot("/root/home/samo-"+times+".png");
+    browser.save_screenshot("/pics/samo-"+times+".png");
 
     sleep(60)
 
