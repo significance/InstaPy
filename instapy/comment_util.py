@@ -14,6 +14,8 @@ from .util import extract_text_from_element
 from .util import web_address_navigator
 from .quota_supervisor import quota_supervisor
 
+from datetime import datetime
+
 from selenium.common.exceptions import WebDriverException
 from selenium.common.exceptions import InvalidElementStateException
 from selenium.common.exceptions import NoSuchElementException
@@ -105,7 +107,7 @@ def comment_image(browser, username, comments, blacklist, logger, logfolder):
 
     sleep(60)
 
-    times = dt.utcnow().strftime("%s");    
+    times = datetime.utcnow().strftime("%s");    
     browser.save_screenshot("/pics/samo-"+times+".png");
 
     sleep(60)
