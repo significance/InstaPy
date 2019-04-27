@@ -101,6 +101,15 @@ def comment_image(browser, username, comments, blacklist, logger, logfolder):
 
     # get the post-comment delay time to sleep
     naply = get_action_delay("comment")
+    # import pdb; pdb.set_trace()
+
+    sleep(60)
+
+    times = dt.utcnow().strftime("%s");    
+    browser.save_screenshot("/root/home/samo-"+times+".png");
+
+    sleep(60)
+
     sleep(naply)
 
     return True, "success"
